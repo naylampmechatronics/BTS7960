@@ -23,7 +23,7 @@ void setup() {
 void loop() {
   // Forward motion
   digitalWrite(R_EN, HIGH);
-  digitalWrite(L_EN, LOW);
+  digitalWrite(L_EN, HIGH);
   analogWrite(R_PWM, 150); // Set speed (0-255)
   analogWrite(L_PWM, 0);
   delay(2000);
@@ -36,7 +36,7 @@ void loop() {
   delay(1000);
 
   // Reverse motion
-  digitalWrite(R_EN, LOW);
+  digitalWrite(R_EN, HIGH);
   digitalWrite(L_EN, HIGH);
   analogWrite(R_PWM, 0);
   analogWrite(L_PWM, 150); // Set speed (0-255)
